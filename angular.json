@@ -29,7 +29,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [],
+            "scripts": ["src/js/text.js"],
             "server": "src/main.server.ts",
             "prerender": true,
             "ssr": {

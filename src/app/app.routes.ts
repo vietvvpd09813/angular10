@@ -1,3 +1,48 @@
 import { Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './component/login/login.component';
+import { ProductsComponent } from './component/products/products.component';
+import { PagenotComponent } from './component/pagenot/pagenot.component';
+import { DetailComponent } from './component/detail/detail.component';
+import { RootComponent } from './root/root.component';
+import { AdminComponent } from './admincomponent/admin/admin.component';
 
-export const routes: Routes = [];
+
+import { AdminuserComponent } from './admincomponent/adminuser/adminuser.component';
+import { CartComponent } from './component/cart/cart.component';
+import { PayComponent } from './component/pay/pay.component';
+import { RegisterComponent } from './component/register/register.component';
+import { ProductnewComponent } from './component/productnew/productnew.component';
+import { OrderComponent } from './component/order/order.component';
+
+export const routes: Routes = [
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+  {
+    path: '',
+    component: RootComponent,
+    children: [
+      { path: 'home', component: HomeComponent },
+      { path: 'detail', component: DetailComponent },
+      { path: 'products', component: ProductsComponent },
+      { path: 'cart', component: CartComponent },
+      { path: 'pay', component: PayComponent },
+      { path: 'order', component: OrderComponent },
+      { path: 'productnew', component: ProductnewComponent },
+
+      { path: '', redirectTo: '/home', pathMatch: 'full' },
+    ],
+  },
+  {
+    path: 'admin',
+    component: AdminComponent,
+    pathMatch: "prefix",
+    children: [
+
+      { path: 'aduser', component: AdminuserComponent },
+
+    ],
+  },
+
+  { path: '**', component: PagenotComponent },
+];

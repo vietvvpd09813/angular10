@@ -8,6 +8,26 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
+
   <app-root></app-root>
+
+
 </body>
 </html>
+<script>
+let none1 = document.getElementById("none1");
+let block1 = document.getElementById("block1");
+
+none1.addEventListener("click", () => {
+  if (block1.style.display === "none" || block1.style.display === "") {
+    block1.style.display = "block";
+  } else {
+    block1.style.display = "none";
+  }
+});
+</script>
+
+
+
+
+
