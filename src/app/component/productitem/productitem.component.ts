@@ -11,6 +11,6 @@ import { RouterLink } from '@angular/router';
 export class ProductitemComponent {
   @Input() name ='';
   @Input() id ='';
-  @Input() price ='';
+  @Input() price = 0;
   @Input( ) url = '';
 }

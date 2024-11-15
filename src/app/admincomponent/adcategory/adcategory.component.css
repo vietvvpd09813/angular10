@@ -1,0 +1,39 @@
+
+  /* Hiện thị form và lớp phủ */
+  #addCategoryBtn:focus ~ #addCategoryForm,
+  #addCategoryBtn:focus ~ #overlay {
+      display: flex;
+  }
+
+  #overlay {
+      display: none;
+  }
+
+  #addCategoryForm:target {
+      display: flex;
+  }
+
+  #formContainer {
+      animation: scaleIn 0.3s forwards;
+  }
+
+  @keyframes scaleIn {
+      from {
+          transform: scale(0);
+      }
+      to {
+          transform: scale(1);
+      }
+  }
+  #editFormContainer{
+    animation: scaleIn 0.3s forwards;
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}

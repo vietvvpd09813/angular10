@@ -61,3 +61,143 @@ function slider2(){
 
   startAutoSlide();
 }
+function btnlist(){
+  let dropdownToggle = document.getElementById('dropdownToggle');
+  let dropdownMenu = document.getElementById('dropdownMenu');
+
+  function handleClick() {
+      if (dropdownMenu.classList.contains('hidden')) {
+          dropdownMenu.classList.remove('hidden');
+          dropdownMenu.classList.add('block');
+      } else {
+          dropdownMenu.classList.add('hidden');
+          dropdownMenu.classList.remove('block');
+      }
+  }
+
+  dropdownToggle.addEventListener('click', handleClick);
+}
+
+function text (){
+  const setup = () => {
+    const getTheme = () => {
+      if (window.localStorage.getItem('dark')) {
+        return JSON.parse(window.localStorage.getItem('dark'))
+      }
+      return !!window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+    }
+
+    const setTheme = (value) => {
+      window.localStorage.setItem('dark', value)
+    }
+
+    return {
+      loading: true,
+      isDark: getTheme(),
+      toggleTheme() {
+        this.isDark = !this.isDark
+        setTheme(this.isDark)
+      },
+    }
+  }
+}
+
+function addcategory() {
+
+  document.getElementById('addCategoryBtn').addEventListener('click', function() {
+      document.getElementById('addCategoryForm').classList.remove('hidden');
+      document.getElementById('overlay').classList.remove('hidden');
+      document.getElementById('formContainer').classList.add('scale-100');
+  });
+
+  document.getElementById('cancelBtn').addEventListener('click', function() {
+      document.getElementById('addCategoryForm').classList.add('hidden');
+      document.getElementById('overlay').classList.add('hidden');
+  });
+
+  // Thêm sự kiện cho nút sửa
+  const editButtons = document.querySelectorAll('button[data-action="edit"]');
+  editButtons.forEach(button => {
+      button.addEventListener('click', function() {
+          document.getElementById('editCategoryForm').classList.remove('hidden');
+          document.getElementById('overlay').classList.remove('hidden');
+          document.getElementById('editFormContainer').classList.add('scale-100');
+      });
+  });
+
+  document.getElementById('editCancelBtn').addEventListener('click', function() {
+      document.getElementById('editCategoryForm').classList.add('hidden');
+      document.getElementById('overlay').classList.add('hidden');
+  });
+
+}
+
+function addproduct(){
+    // JavaScript để hiển thị/ẩn form
+    document.getElementById('addProductBtn').addEventListener('click', function() {
+      document.getElementById('addProductForm').classList.remove('hidden');
+      document.getElementById('overlay').classList.remove('hidden');
+      document.getElementById('formContainer').classList.add('scale-100');
+  });
+
+  document.getElementById('cancelBtn').addEventListener('click', function() {
+      document.getElementById('addProductForm').classList.add('hidden');
+      document.getElementById('overlay').classList.add('hidden');
+  });
+}
+function edituser(){
+   // Hiển thị form chỉnh sửa trạng thái
+   document.querySelectorAll('.edit-btn').forEach(button => {
+    button.addEventListener('click', function() {
+        document.getElementById('editUserForm').style.display = 'flex'; // Hiển thị form
+        document.getElementById('overlay').style.display = 'block'; // Hiển thị lớp phủ
+        const container = document.getElementById('editFormContainer');
+        container.classList.remove('scale-0', 'opacity-0'); // Đảm bảo form không có lớp ẩn
+        container.classList.add('scale-100', 'opacity-100'); // Thêm lớp hiển thị
+    });
+});
+
+// Hủy hiển thị form
+document.getElementById('cancelEditBtn').addEventListener('click', function() {
+    document.getElementById('editUserForm').style.display = 'none'; // Ẩn form
+    document.getElementById('overlay').style.display = 'none'; // Ẩn lớp phủ
+    const container = document.getElementById('editFormContainer');
+    container.classList.remove('scale-100', 'opacity-100'); // Loại bỏ lớp hiển thị
+    container.classList.add('scale-0', 'opacity-0'); // Thêm lớp ẩn
+});
+
+// Thêm logic cho lớp phủ
+document.getElementById('overlay').addEventListener('click', function() {
+    document.getElementById('editUserForm').style.display = 'none'; // Ẩn form
+    document.getElementById('overlay').style.display = 'none'; // Ẩn lớp phủ
+});
+
+}
+
+// Hàm xử lý tất cả các bước khi nhấn nút "Xem chi tiết"
+function addorder() {
+  // Bước 1: Xử lý dữ liệu đơn hàng, ví dụ: in ra ID đơn hàng (hoặc có thể gọi API lấy dữ liệu đơn hàng)
+  // In ra ID đơn hàng để kiểm tra
+
+  // Bước 2: Hiển thị modal chi tiết đơn hàng
+  // Hiển thị modal
+  document.querySelector('.none').addEventListener('click', function() {
+    // Lấy phần tử với id 'box11' và ẩn nó đi
+    document.getElementById('orderDetailsModal').style.display = 'none';
+  });
+// Lấy tất cả các phần tử có lớp .block1
+const block1Elements = document.querySelectorAll('.block1');
+
+// Duyệt qua tất cả các phần tử và gán sự kiện click cho từng phần tử
+block1Elements.forEach(function(element) {
+  element.addEventListener('click', function() {
+    // Lấy phần tử với id 'orderDetailsModal' và ẩn nó đi
+    document.getElementById('orderDetailsModal').style.display = 'flex';
+  });
+});
+
+
+
+
+}
+

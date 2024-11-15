@@ -13,30 +13,34 @@ export class HomeProductListComponent {
   products = [
     {
       id: 1,
-      url: "https://cdn.tgdd.vn/Products/Images/42/329143/s16/iphone-16-pro-sa-mac-650x650.png",
-      name: 'iPhone 16 Pro 128GB',
-      price: '28.990.000₫'
+      url: "https://cdn.tgdd.vn/Products/Images/44/322612/s16/macbook-air-15-inch-m3-2024-bac-1-650x650.png",
+      name: 'MacBook Air M2 256GB',
+      price: 1200,
+      isSave:false
     },
     {
       id: 2,
-      url: "https://cdn.tuoitre.vn/zoom/700_700/471584752817336320/2023/4/25/son-tung-1682429100141711717000-181-0-1080-1717-crop-16824291249331603053151.jpg",
-      name: 'Sơn tùng',
-      price: '150'
+      url: "https://cdn.tgdd.vn/Products/Images/44/322616/s16/macbook-air-15-inch-m3-2024-bac-650x650.png",
+      name: 'MacBook Pro 13 M2 ',
+      price: 1600,
+      isSave:false
     },
     {
-      id: 2,
-      url:"https://cdn.tuoitre.vn/zoom/700_700/2021/6/12/hieuthuhai-2-16234572917851280326311-crop-1623457321420383967555.jpg",
-      name: 'hiếu thứ hai',
-      price: '150'
+      id: 3,
+      url: "https://cdn.tgdd.vn/Products/Images/5698/318238/s16/imac-m3-ba%CC%A3c-thumb-650x650.png",
+      name: 'Acer Aspire 5',
+      price: 700,
+      isSave:false
     },
     {
-      id: 2,
-      url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHDkXbNh0WKfHKG8loKAUdl_rmONhSBL6UkQ&s",
-      name: 'jack',
-      price: '5 củ'
+      id: 4,
+      url: "https://cdn.tgdd.vn/Products/Images/44/231244/s16/mac-air-m1-13-xam-new-650x650.png",
+      name: 'Dell XPS 13',
+      price: 1300,
+      isSave:false
     },
 
-  ];
+];
 
   filteredProducts = this.products;
 }

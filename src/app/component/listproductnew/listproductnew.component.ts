@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ProductnewComponent } from '../productnew/productnew.component';
 import { CommonModule } from '@angular/common';
 
+
 @Component({
   selector: 'app-listproductnew',
   standalone: true,
@@ -10,43 +11,74 @@ import { CommonModule } from '@angular/common';
   styleUrl: './listproductnew.component.css'
 })
 export class ListproductnewComponent {
-  products = [
+
+   products = [
     {
       id: 1,
-      url: "https://cdn.tgdd.vn/Products/Images/42/329143/s16/iphone-16-pro-sa-mac-650x650.png",
-      name: 'iPhone 16 Pro 128GB',
-      price: 350,
+      url: "https://cdn.tgdd.vn/Products/Images/44/322612/s16/macbook-air-15-inch-m3-2024-bac-1-650x650.png",
+      name: 'MacBook Air M2 256GB',
+      price: 1200,
       isSave:false
     },
     {
       id: 2,
-      url: "https://cdn.tuoitre.vn/zoom/700_700/471584752817336320/2023/4/25/son-tung-1682429100141711717000-181-0-1080-1717-crop-16824291249331603053151.jpg",
-      name: 'Sơn tùng',
-      price: 330,
+      url: "https://cdn.tgdd.vn/Products/Images/44/322616/s16/macbook-air-15-inch-m3-2024-bac-650x650.png",
+      name: 'MacBook Pro 13 M2 512GB',
+      price: 1600,
       isSave:false
     },
     {
       id: 3,
-      url:"https://cdn.tuoitre.vn/zoom/700_700/2021/6/12/hieuthuhai-2-16234572917851280326311-crop-1623457321420383967555.jpg",
-      name: 'hiếu thứ hai',
-      price: 230,
+      url: "https://cdn.tgdd.vn/Products/Images/5698/318238/s16/imac-m3-ba%CC%A3c-thumb-650x650.png",
+      name: 'Acer Aspire 5',
+      price: 700,
       isSave:false
     },
     {
-      id: 10,
-      url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHDkXbNh0WKfHKG8loKAUdl_rmONhSBL6UkQ&s",
-      name: 'jack',
-      price: 5,
+      id: 4,
+      url: "https://cdn.tgdd.vn/Products/Images/44/231244/s16/mac-air-m1-13-xam-new-650x650.png",
+      name: 'Dell XPS 13',
+      price: 1300,
       isSave:false
     },
+    {
+      id: 5,
+      url: "https://cdn.tgdd.vn/Products/Images/44/318230/s16/mac-topzone-promax-black-650x650.png",
+      name: 'HP Spectre x360',
+      price: 1400,
+      isSave:false
+    },
+    {
+      id: 6,
+      url: "https://cdn.tgdd.vn/Products/Images/5698/309281/s16/mac-studio-m2-max-2023-150623-105154-650x650.png",
+      name: 'Lenovo ThinkPad X1 Carbon',
+      price: 1800,
+      isSave:false
+    },
+    {
+      id: 7,
+      url: "https://cdn.tgdd.vn/Products/Images/44/309016/s16/mac-air-15-xam-new-650x650.png",
+      name: 'Surface Laptop 5',
+      price: 1500,
+      isSave:false
+    },
+    {
+      id: 8,
+      url: "https://cdn.tgdd.vn/Products/Images/44/309016/s16/mac-air-15-xam-new-650x650.png",
+      name: 'Asus ZenBook Flip',
+      price: 1100,
+      isSave:false
+    }
+];
 
-  ];
  getdata(data:any){
   console.log(data);
   let index = this.products.findIndex((item)=>{
     return item.id == data.id;
   })
    this.products[index].isSave= data.isSave;
+
  }
   filteredProducts = this.products;
+
 }

@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Component ,OnInit } from '@angular/core';
+import { ActivatedRoute, RouterLink } from '@angular/router';
+
 
 
 @Component({
@@ -9,6 +10,13 @@ import { RouterLink } from '@angular/router';
   templateUrl: './detail.component.html',
   styleUrl: './detail.component.css'
 })
-export class DetailComponent {
+export class DetailComponent implements OnInit {
+  constructor(private route: ActivatedRoute) {
 
+  }
+  id:any;
+  ngOnInit(): void {
+     this.id = this.route.snapshot.params['id'];
+    console.log(this.id);
+  }
 }
