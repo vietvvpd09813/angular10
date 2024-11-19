@@ -119,9 +119,9 @@ constructor (private router:Router){}
     this.filteredProducts = this.products.filter(product =>
       product.name.toLowerCase().includes(this.searchQuery.toLowerCase())
     );
-    this.router.navigate(['/products'],{
-      queryParams: {q:this.searchQuery}
-    })
+    // this.router.navigate(['/products'],{
+    //   queryParams: {q:this.searchQuery}
+    // })
   }
 
 

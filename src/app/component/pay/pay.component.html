@@ -1,117 +1,63 @@
-<div class="font-sans bg-white p-4">
-  <div class="max-w-4xl mx-auto">
-    <div class="text-center">
-      <h2 class="text-3xl font-extrabold text-gray-800 inline-block border-b-[3px] border-gray-800 pb-1">Checkout</h2>
-    </div>
+<div id="kjh" class="font-[sans-serif] bg-white p-4">
+  <div class="md:max-w-5xl max-w-xl mx-auto">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="lg:col-span-2 max-md:order-1">
+        <a routerLink="/order"><h2 class="text-3xl font-extrabold text-gray-800" >Thanh toán</h2></a>
+        <p class="text-gray-800 text-sm mt-4">Hoàn tất giao dịch của bạn một cách nhanh chóng và an toàn với quy trình thanh toán dễ sử dụng của chúng tôi.</p>
 
-    <div class="mt-12">
-      <div class="grid md:grid-cols-3 gap-4">
-        <div>
-          <h3 class="text-3xl font-bold text-gray-300">01</h3>
-          <h3 class="text-xl font-bold text-gray-800 mt-1">Personal Details</h3>
-        </div>
-
-        <div class="md:col-span-2">
-          <form>
-            <div class="grid sm:grid-cols-2 gap-4">
-              <div>
-                <input type="text" placeholder="First name"
-                  class="px-4 py-3 bg-white text-gray-800 w-full text-sm border-2 rounded-md focus:border-blue-500 outline-none" />
-              </div>
-              <div>
-                <input type="text" placeholder="Last name"
-                  class="px-4 py-3 bg-white text-gray-800 w-full text-sm border-2 rounded-md focus:border-blue-500 outline-none" />
-              </div>
-              <div>
-                <input type="email" placeholder="Email address"
-                  class="px-4 py-3 bg-white text-gray-800 w-full text-sm border-2 rounded-md focus:border-blue-500 outline-none" />
-              </div>
-              <div>
-                <input type="number" placeholder="Phone number"
-                  class="px-4 py-3 bg-white text-gray-800 w-full text-sm border-2 rounded-md focus:border-blue-500 outline-none" />
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-4 mt-12">
-        <div>
-          <h3 class="text-3xl font-bold text-gray-300">02</h3>
-          <h3 class="text-xl font-bold text-gray-800 mt-1">Shopping Address</h3>
-        </div>
-
-        <div class="md:col-span-2">
-          <form>
-            <div class="grid sm:grid-cols-2 gap-4">
-              <div>
-                <input type="text" placeholder="Street address"
-                  class="px-4 py-3 bg-white text-gray-800 w-full text-sm border-2 rounded-md focus:border-blue-500 outline-none" />
-              </div>
-              <div>
-                <input type="text" placeholder="City"
-                  class="px-4 py-3 bg-white text-gray-800 w-full text-sm border-2 rounded-md focus:border-blue-500 outline-none" />
-              </div>
-              <div>
-                <input type="text" placeholder="State"
-                  class="px-4 py-3 bg-white text-gray-800 w-full text-sm border-2 rounded-md focus:border-blue-500 outline-none" />
-              </div>
-              <div>
-                <input type="number" placeholder="Zip Code"
-                  class="px-4 py-3 bg-white text-gray-800 w-full text-sm border-2 rounded-md focus:border-blue-500 outline-none" />
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-4 mt-12">
-        <div>
-          <h3 class="text-3xl font-bold text-gray-300">03</h3>
-          <h3 class="text-xl font-bold text-gray-800 mt-1">Payment method</h3>
-        </div>
-
-        <div class="md:col-span-2">
-          <div class="grid gap-4 sm:grid-cols-2">
-            <div class="flex items-center">
-              <input type="radio" class="w-5 h-5 cursor-pointer" id="card" checked />
-              <label for="card" class="ml-4 flex gap-2 cursor-pointer">
-                <img src="https://readymadeui.com/images/visa.webp" class="w-12" alt="card1" />
-                <img src="https://readymadeui.com/images/american-express.webp" class="w-12" alt="card2" />
-                <img src="https://readymadeui.com/images/master.webp" class="w-12" alt="card3" />
-              </label>
+        <form class="mt-8 max-w-lg">
+          <div class="grid gap-4">
+            <div>
+              <input type="text" placeholder="Họ tên"
+                class="px-4 py-3.5 bg-gray-100 text-gray-800 w-full text-sm border rounded-md focus:border-purple-500 focus:bg-transparent outline-none" />
             </div>
 
-            <div class="flex items-center">
-              <input type="radio" class="w-5 h-5 cursor-pointer" id="paypal" />
-              <label for="paypal" class="ml-4 flex gap-2 cursor-pointer">
-                <img src="https://readymadeui.com/images/paypal.webp" class="w-20" alt="paypalCard" />
-              </label>
+            <div>
+              <input type="text" placeholder="Địa chỉ"
+                class="px-4 py-3.5 bg-gray-100 text-gray-800 w-full text-sm border rounded-md focus:border-purple-500 focus:bg-transparent outline-none" />
+            </div>
+
+            <div>
+              <input type="tel" placeholder="Số điện thoại"
+                class="px-4 py-3.5 bg-gray-100 text-gray-800 w-full text-sm border rounded-md focus:border-purple-500 focus:bg-transparent outline-none" />
+            </div>
+
+            <div class="flex bg-gray-100 border rounded-md focus-within:border-purple-500 focus-within:bg-transparent overflow-hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 ml-3" viewBox="0 0 32 20">
+                <circle cx="10" cy="10" r="10" fill="#f93232" data-original="#f93232" />
+                <path fill="#fed049"
+                  d="M22 0c-2.246 0-4.312.75-5.98 2H16v.014c-.396.298-.76.634-1.107.986h2.214c.308.313.592.648.855 1H14.03a9.932 9.932 0 0 0-.667 1h5.264c.188.324.365.654.518 1h-6.291a9.833 9.833 0 0 0-.377 1h7.044c.104.326.186.661.258 1h-7.563c-.067.328-.123.66-.157 1h7.881c.039.328.06.661.06 1h-8c0 .339.027.67.06 1h7.882c-.038.339-.093.672-.162 1h-7.563c.069.341.158.673.261 1h7.044a9.833 9.833 0 0 1-.377 1h-6.291c.151.344.321.678.509 1h5.264a9.783 9.783 0 0 1-.669 1H14.03c.266.352.553.687.862 1h2.215a10.05 10.05 0 0 1-1.107.986A9.937 9.937 0 0 0 22 20c5.523 0 10-4.478 10-10S27.523 0 22 0z"
+                  class="hovered-path" data-original="#fed049" />
+              </svg>
+              <input type="number" placeholder="Số thẻ"
+                class="px-4 py-3.5 text-gray-800 w-full text-sm outline-none bg-transparent" />
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <input type="text" placeholder="Hạn sử dụng (EXP)"
+                  class="px-4 py-3.5 bg-gray-100 text-gray-800 w-full text-sm border rounded-md focus:border-purple-500 focus:bg-transparent outline-none" />
+              </div>
+              <div>
+                <input type="number" placeholder="CVV"
+                  class="px-4 py-3.5 bg-gray-100 text-gray-800 w-full text-sm border rounded-md focus:border-purple-500 focus:bg-transparent outline-none" />
+              </div>
             </div>
           </div>
 
-          <div class="grid sm:grid-cols-4 gap-4 mt-4">
-            <div class="col-span-2">
-              <input type="number" placeholder="Card number"
-                class="px-4 py-3 bg-white text-gray-800 w-full text-sm border-2 rounded-md focus:border-blue-500 outline-none" />
-            </div>
-            <div>
-              <input type="number" placeholder="EXP."
-                class="px-4 py-3 bg-white text-gray-800 w-full text-sm border-2 rounded-md focus:border-blue-500 outline-none" />
-            </div>
-            <div>
-              <input type="number" placeholder="CVV"
-                class="px-4 py-3 bg-white text-gray-800 w-full text-sm border-2 rounded-md focus:border-blue-500 outline-none" />
-            </div>
-          </div>
-        </div>
+          <button  routerLink="/order" type="button" class="mt-8 w-40 py-3.5 text-sm bg-purple-500 text-white rounded-md hover:bg-purple-600 tracking-wide">Thanh toán</button>
+        </form>
       </div>
 
-      <div class="flex flex-wrap justify-end gap-4 mt-12">
-        <button type="button"
-          class="px-6 py-3 text-sm font-semibold tracking-wide bg-transparent border-2 text-gray-800 rounded-md hover:bg-gray-100">Pay later</button>
-        <button type="button"
-          class="px-6 py-3 text-sm font-semibold tracking-wide bg-blue-600 text-white rounded-md hover:bg-blue-700">Pay now</button>
+      <div class="bg-gray-100 p-6 rounded-md">
+        <h2 class="text-3xl font-extrabold text-gray-800">$250.00</h2>
+
+        <ul class="text-gray-800 mt-8 space-y-4">
+          <li class="flex flex-wrap gap-4 text-sm">iphone x <span class="ml-auto font-bold">$150.00</span></li>
+          <li class="flex flex-wrap gap-4 text-sm">Giảm giá <span class="ml-auto font-bold">$90.00</span></li>
+          <li class="flex flex-wrap gap-4 text-sm">Thuế <span class="ml-auto font-bold">$10.00</span></li>
+          <li class="flex flex-wrap gap-4 text-sm font-bold border-t-2 pt-4">Tổng cộng <span class="ml-auto">$250.00</span></li>
+        </ul>
       </div>
     </div>
   </div>

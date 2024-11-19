@@ -1,4 +1,4 @@
-import { Routes } from '@angular/router';
+import { ActivatedRouteSnapshot, CanActivateFn, RouterStateSnapshot, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './component/login/login.component';
 import { ProductsComponent } from './component/products/products.component';
@@ -19,7 +19,19 @@ import { AdcategoryComponent } from './admincomponent/adcategory/adcategory.comp
 import { AdproductComponent } from './admincomponent/adproduct/adproduct.component';
 import { AdcommentComponent } from './admincomponent/adcomment/adcomment.component';
 import { AdorderComponent } from './admincomponent/adorder/adorder.component';
+import { CanActivate } from '@angular/router';
 import { DashboardComponent } from './admincomponent/dashboard/dashboard.component';
+
+
+
+
+const canlogin: CanActivateFn = (
+  route: ActivatedRouteSnapshot,
+  state: RouterStateSnapshot,
+) => {
+  return false
+  // canActivate  :[canlogin],
+}
 
 export const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -28,7 +40,7 @@ export const routes: Routes = [
     path: '',
     component: RootComponent,
     children: [
-      { path: 'home', component: HomeComponent },
+      { path: 'home',component: HomeComponent },
       { path: 'products/:id', component: DetailComponent },
       { path: 'products', component: ProductsComponent },
       { path: 'cart', component: CartComponent },

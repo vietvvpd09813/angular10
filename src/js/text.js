@@ -176,16 +176,12 @@ document.getElementById('overlay').addEventListener('click', function() {
 
 // Hàm xử lý tất cả các bước khi nhấn nút "Xem chi tiết"
 function addorder() {
-  // Bước 1: Xử lý dữ liệu đơn hàng, ví dụ: in ra ID đơn hàng (hoặc có thể gọi API lấy dữ liệu đơn hàng)
-  // In ra ID đơn hàng để kiểm tra
 
-  // Bước 2: Hiển thị modal chi tiết đơn hàng
-  // Hiển thị modal
   document.querySelector('.none').addEventListener('click', function() {
-    // Lấy phần tử với id 'box11' và ẩn nó đi
+
     document.getElementById('orderDetailsModal').style.display = 'none';
   });
-// Lấy tất cả các phần tử có lớp .block1
+
 const block1Elements = document.querySelectorAll('.block1');
 
 // Duyệt qua tất cả các phần tử và gán sự kiện click cho từng phần tử
@@ -201,3 +197,29 @@ block1Elements.forEach(function(element) {
 
 }
 
+
+function loginaaa(){
+  const sign_in_btn = document.querySelector("#sign-in-btn");
+const sign_up_btn = document.querySelector("#sign-up-btn");
+const container = document.querySelector(".container");
+
+sign_up_btn.addEventListener("click", () => {
+    container.classList.add("sign-up-mode");
+});
+
+sign_in_btn.addEventListener("click", () => {
+    container.classList.remove("sign-up-mode");
+});
+
+let submidt = document.getElementById('socialtext');
+let returnt = document.getElementById('returnt');
+let ppass = document.getElementById('ppass');
+
+
+submidt.addEventListener("click", () => {
+    ppass.classList.add("lissi");
+});
+returnt.addEventListener("click", () => {
+    ppass.classList.remove("lissi");
+});
+}
